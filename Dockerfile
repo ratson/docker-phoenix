@@ -5,7 +5,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-RUN apt-get update && apt-get upgrade -y \
+RUN apt-get update && apt-get dist-upgrade -y \
     && apt-get install -y build-essential curl git postgresql-client \
     && curl -o /tmp/erlang.deb http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb \
     && dpkg -i /tmp/erlang.deb \
